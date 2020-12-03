@@ -36,7 +36,6 @@ echo ""
 echo -e "-------------------------------Oracle DB Instances---------------------------"
 if id oracle >/dev/null 2>&1; then
 /bin/ps -ef|grep pmon
-then
 else
 echo "oracle user does not exist on $(hostname)"
 fi
@@ -49,6 +48,6 @@ yum updateinfo summary | grep 'Security|Bugfix|Enhancement'
 echo -e "-----------------------------------------------------------------------------"
 else
 echo -e "-------------------------------Package Updates-------------------------------"
-cat /var/lib/update-notifier/updates-available
+
 echo -e "-----------------------------------------------------------------------------"
 fi
